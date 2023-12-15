@@ -1,8 +1,23 @@
 class Hero {
-    constructor (name, age, type, attackType){
+    constructor(name, age, type){
 
         this.name = name;
         this.age = age;
         this.type = type;
     }
+    AttackMessage(){
+        if (this.type === "Mage") {
+            console.log(`${this.type} attacked using spells!`);
+        } else if(this.type === "Warrior") {
+            console.log(`${this.type} attacked using a sword!`);
+        } else if(this.type === "Monk") {
+            console.log(`${this.type} attacked using martial arts!`);
+        } else if(this.type === "Ninja") {
+            console.log(`${this.type} attacked using shurikens!`);
+        } else {
+            console.log("Error! Enter a valid class.");
+        }
+    }
 }
+let HeroAttackMessage = new Hero("Davi", 19, "Mage");
+HeroAttackMessage.AttackMessage()
